@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_horizontal"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleMarginStart="100dp"
+        app:titleTextColor="@color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Project Details"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp" />
+
+        <ImageView
+            android:id="@+id/Delete"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/delete"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Project Title"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+                    <EditText
+                        android:id="@+id/etName"
+                        android:hint="Add project title"
+                        android:textSize="14dp"
+                        android:maxLength="30"
+                        android:layout_marginTop="3dp"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Project Description"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+                    <EditText
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:gravity="left"
+                        android:hint="Add project description"
+                        android:textSize="14dp"
+                        android:maxLength="280"
+                        android:padding="16dp"
+                        android:layout_height="138dp"
+                        android:background="#EDE9E5"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Recommendations"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+                    <EditText
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/etRecommendation"
+                        android:layout_width="match_parent"
+                        android:gravity="left"
+                        android:hint="Add recommendations"
+                        android:textSize="14dp"
+                        android:maxLength="280"
+                        android:padding="16dp"
+                        android:layout_height="138dp"
+                        android:background="#EDE9E5"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Project URL"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+                    <EditText
+                        android:id="@+id/etURL"
+                        android:hint="Add project URL"
+                        android:textSize="14dp"
+                        android:layout_marginTop="3dp"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Resources"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+                    <EditText
+                        android:id="@+id/etRec"
+                        android:hint="Add supported resources"
+                        android:textSize="14dp"
+                        android:layout_marginTop="3dp"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="Team Members"
+                        android:textAppearance="?attr/textAppearanceHeadline6"/>
+                    <EditText
+                        android:id="@+id/NoOfDevelopers2"
+                        android:inputType="number"
+                        android:hint="Number of Developers"
+                        android:layout_marginTop="3dp"
+                        android:textSize="14dp"
+                        android:maxLength="20"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                    <EditText
+                        android:id="@+id/NoOfTesters"
+                        android:inputType="number"
+                        android:layout_marginTop="3dp"
+                        android:maxLength="20"
+                        android:hint="Number of Testers"
+                        android:textSize="14dp"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                    <EditText
+                        android:id="@+id/NoOfFinanciers"
+                        android:inputType="number"
+                        android:hint="Number of Financiers"
+                        android:textSize="14dp"
+                        android:maxLength="20"
+                        android:padding="16dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                    <EditText
+                        android:id="@+id/NoOfManagers"
+                        android:inputType="number"
+                        android:hint="Number of Managers"
+                        android:maxLength="20"
+                        android:layout_marginTop="3dp"
+                        android:textSize="14dp"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                    <EditText
+                        android:id="@+id/NoOfOthers"
+                        android:inputType="number"
+                        android:hint="Number of other roles"
+                        android:maxLength="20"
+                        android:layout_marginTop="3dp"
+                        android:textSize="14dp"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#FFEDE9E5"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <!-- things to scroll -->
+
+    </LinearLayout>
+
+</ScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

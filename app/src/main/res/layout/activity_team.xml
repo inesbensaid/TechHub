@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Team">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_horizontal"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleMarginStart="100dp"
+        app:titleTextColor="@color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Team Members"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ListView
+        android:id="@+id/Project_list"
+        android:layout_width="match_parent"
+        android:layout_height="521dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#000000"
+        app:itemIconTint="#ff6b00"
+        app:itemTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/Project_list"
+        app:labelVisibilityMode="labeled"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="@id/Project_list"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

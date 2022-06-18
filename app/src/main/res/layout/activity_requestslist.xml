@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#ff6b00"
+            android:textAlignment="center"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="TechHub"
+            app:titleTextColor="@color/white"
+            android:gravity="center_horizontal" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#ff6b00"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#ff6b00"
+            app:tabTextColor="#ff6b00">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMING" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SENT" />
+
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ListView
+        android:id="@+id/Req_list"
+        android:layout_width="match_parent"
+        android:layout_height="559dp"
+        android:layout_marginTop="105dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#000000"
+        app:itemIconTint="#ff6b00"
+        app:itemTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/Project_list"
+        app:labelVisibilityMode="labeled"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="@id/Project_list"
+        app:itemRippleColor="@color/white"
+        app:menu="@menu/bottom_nav_menu" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

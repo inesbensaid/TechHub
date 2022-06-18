@@ -1,0 +1,7 @@
+include ':app'
+setBinding(new Binding([gradle: this]))
+
+rootProject.name = "TechHub"
+
+include ':flutter_module'
+project(':flutter_module').projectDir = new File('../flutter_module')

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".SearchPage">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_horizontal"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleMarginStart="100dp"
+        app:titleTextColor="@color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Search"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="130dp"
+            android:layout_marginLeft="130dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp"
+        android:background="#000000"
+        app:itemIconTint="#FF6B00"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="369dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="13dp"
+        android:background="#f4f0ea"
+        android:orientation="vertical"
+        android:id="@+id/buttons"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/Cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search by Category"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="14dp" />
+
+        <RadioGroup
+            android:id="@+id/radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/Education"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:buttonTint="#FF3B414B"
+                android:text="Education"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/Games"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:buttonTint="#FF3B414B"
+                android:text="Games"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/Health"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:buttonTint="#FF3B414B"
+                android:text="Health"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/Social"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:buttonTint="#FF3B414B"
+                android:text="Social"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/Travel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:buttonTint="#FF3B414B"
+                android:text="Travel"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/Other"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:buttonTint="#FF3B414B"
+                android:text="Other"
+                android:textColor="@color/black" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="369dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="100dp"
+        android:background="#f4f0ea"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search by Project Title"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:background="#f4f0ea"
+            android:hint="Add project title"
+            android:maxLength="30"
+            android:padding="16dp"
+            android:textSize="14dp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginLeft="166dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginRight="166dp"
+        android:text="Search"
+        android:backgroundTint="#ff6b00"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

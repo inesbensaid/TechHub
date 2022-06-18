@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "927827310651",
+    "project_id": "techhub-a7b61",
+    "storage_bucket": "techhub-a7b61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927827310651:android:dcfdba16ed87254716c41e",
+        "android_client_info": {
+          "package_name": "com.example.techhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927827310651-84of35btalmnvbs566p5k9rk34gtfn4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWaYymNiDsQRaaf80XTQuZo3BVUdXKrzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927827310651-84of35btalmnvbs566p5k9rk34gtfn4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

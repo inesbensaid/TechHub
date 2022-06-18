@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/white"
+        android:gravity="center_horizontal"
+        android:theme="?attr/actionBarTheme">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+    <TextView
+        android:id="@+id/catName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabs"
+        android:layout_below="@id/toolbar">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <ListView
+        android:id="@+id/Project_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNav"
+        android:layout_below="@id/tabs"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/emptyElement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Projects Yet"
+        android:textColor="#525252"
+        android:textSize="19.0sp"
+        android:visibility="gone" />
+
+    <!--some Cha cha-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#000000"
+        app:itemIconTint="#FF6B00"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+    <!--/some Cha cha-->
+
+</RelativeLayout>

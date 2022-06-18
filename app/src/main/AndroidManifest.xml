@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.techhub">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/splashbackground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TechHub">
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".Payment" />
+        <activity android:name=".Team" />
+        <activity android:name=".MyProjects" />
+        <activity android:name=".ProjectDetails" />
+        <activity android:name=".Completed_details" />
+        <activity android:name=".SentDetails" />
+        <activity android:name=".Apply" />
+        <activity android:name=".Chat" />
+        <activity android:name=".Progress" />
+        <activity android:name=".MorePage" />
+        <activity android:name=".SearchPage" />
+        <activity android:name=".projects" />
+        <activity android:name=".addCompleted" />
+        <activity android:name=".Requests" />
+        <activity android:name=".Education" />
+        <activity android:name=".Games" />
+        <activity android:name=".Health" />
+        <activity android:name=".Travel" />
+        <activity android:name=".Social" />
+        <activity android:name=".Other" />
+        <activity android:name=".AddProject" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".MemberProfile" />
+        <activity
+            android:name=".signup"
+            android:noHistory="true" />
+        <activity
+            android:name=".Login"
+            android:noHistory="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

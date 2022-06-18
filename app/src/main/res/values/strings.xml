@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TechHub</string>
+    <string name="other">Other</string>
+    <string name="health">Health</string>
+    <string name="game">Game</string>
+    <string name="travel">Travel</string>
+    <string name="education">Education</string>
+    <string name="social">Social</string>
+    <string name="select_one_category">Select One Category</string>
+    <string name="no_of_others">No. of Others</string>
+    <string name="project_name">Project Name :</string>
+    <string name="project" />
+    <string name="description">Description:</string>
+    <string name="new_ideas">NEW IDEAS</string>
+    <string name="current_project">CURRENT PROJECT</string>
+    <string name="previous_project">PREVIOUS PROJECT</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? <u>Sign up</u>.</string>
+    <string name="already_signed_up_log_in">Already Signed Up? <u>Log in</u>.</string>
+    <string name="add_more_member"><u>Add more member?</u></string>
+</resources>
