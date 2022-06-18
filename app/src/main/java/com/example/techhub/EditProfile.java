@@ -40,7 +40,7 @@ public class EditProfile extends AppCompatActivity {
     String user_id = currentUser.getUid();
     Button save ;
     private Timer timer ;
-    private final long DELAY = 8000; // in ms
+    
     DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference userRef = rootRef.child("Users");
     String uKey ,fname, web1,bio1 ,eml;
@@ -95,55 +95,7 @@ public class EditProfile extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) { }
         });
 
-        mail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-                    AlertDialog.Builder b = new AlertDialog.Builder( v.getContext(), R.style.Widget_AppCompat_ButtonBar_AlertDialog);//EditProfile.this
-                    final View v2 = getLayoutInflater().inflate(R.layout.password, null);
-                    b.setView(v2);
-                    b.setTitle("Enter Your Password");
-                    b.setMessage("please re-enter your password to change your Email");
-                    b.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            EditText editText = v2.findViewById(R.id.editTextTextPassword);
-                            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                                @Override
-                                public void onFocusChange(View view, boolean b1) {
-                                    if (!b1) {
-                                        String psswrd ;
-                                        psswrd = editText.getText().toString().trim();
-                                        System.out.println("TRYING TO EXIST !!! with pass1 : " + psswrd);
-                                        if(!(psswrd.equals(null))){
-                                            uPass = psswrd;
-                                            System.out.println("TRYING TO EXIST !!! with pass2 : " + uPass);
-                                            timer.cancel();
-                                        }
-                                    }
-                                }
-                            });
-                        }
-                    });
-                    b.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) { }});
-                    b.create().show();
-                    timer = new Timer();
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            uPass = ""; // write your password here
-                          s =  confirmEmail(mail.getText().toString().trim(), uPass);
-
-                        }
-
-                    }, DELAY);
-                }
-            }
-        });
-
+      
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
