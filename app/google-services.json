@@ -7,27 +7,27 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:927827310651:android:dcfdba16ed87254716c41e",
+        "mobilesdk_app_id": "",
         "android_client_info": {
           "package_name": "com.example.techhub"
         }
       },
       "oauth_client": [
         {
-          "client_id": "927827310651-84of35btalmnvbs566p5k9rk34gtfn4f.apps.googleusercontent.com",
+          "client_id": "",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDWaYymNiDsQRaaf80XTQuZo3BVUdXKrzE"
+          "current_key": ""
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "927827310651-84of35btalmnvbs566p5k9rk34gtfn4f.apps.googleusercontent.com",
+              "client_id": "",
               "client_type": 3
             }
           ]
