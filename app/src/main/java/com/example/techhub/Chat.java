@@ -92,7 +92,6 @@ public class Chat extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) { }
         });
@@ -124,7 +123,6 @@ public class Chat extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) { }
         });
-
         /**
          * Firebase - Receives message
          */
@@ -150,7 +148,6 @@ public class Chat extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) { }
 
