@@ -4,6 +4,4 @@ It is an application that contains previous, current and new technical projects.
 
 
 ### Contributors
-Aether22
-amne66
-lenashayban
+Aether22 - amne66 - lenashayban
