@@ -44,8 +44,7 @@ public class CurrentAdapter extends ArrayAdapter<Project> {
 
         name = (TextView) convertView.findViewById(R.id.Project_name);
         description =  (TextView) convertView.findViewById(R.id.Description);
-        ///
-
+       
         name.setText(project.getName()+"\n");
         description.setText(project.getDescription()+"\n");
 
@@ -81,6 +80,4 @@ public class CurrentAdapter extends ArrayAdapter<Project> {
 
         return convertView;
     }
-
-
 }
